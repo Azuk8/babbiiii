@@ -1,52 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>A Very Important Question ❤️</title>
-<link rel="stylesheet" href="design.css">
+  <title>Important Question ❤️</title>
+  <link rel="stylesheet" href="design.css">
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-<h1>Do you love me? ❤️</h1>
+    <h1>I have a question for you 😌</h1>
 
-<button onclick="yes()">Yes 💖</button>
-<button id="noBtn">No 😢</button>
+    <p>Do you love me? ❤️</p>
 
-</div>
+    <button onclick="yes()">Yes obviously 💖</button>
+    <button id="noBtn">No 😒</button>
 
-<script>
+  </div>
 
-function yes(){
-window.location.href = "love.html";
-}
+  <script>
+    function yes() {
+      window.location.href = "love.html";
+    }
 
-const noBtn = document.getElementById("noBtn");
+    const noBtn = document.getElementById("noBtn");
 
-/* Make the NO button run away */
-noBtn.addEventListener("mouseover", moveButton);
+    const funnyMessages = [
+      "Nice try 😏",
+      "You can't say no to me 😌",
+      "Be honest... it's me right? 😍",
+      "Come on... press YES 💖",
+      "I know you want to 😄"
+    ];
 
-function moveButton(){
+    noBtn.addEventListener("mouseover", () => {
+      let x = Math.random() * (window.innerWidth - 100);
+      let y = Math.random() * (window.innerHeight - 50);
 
-let x = Math.random() * (window.innerWidth - 100);
-let y = Math.random() * (window.innerHeight - 50);
+      noBtn.style.position = "absolute";
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
 
-noBtn.style.position = "absolute";
-noBtn.style.left = x + "px";
-noBtn.style.top = y + "px";
-
-showPopup();
-}
-
-/* Funny popup */
-function showPopup(){
-
-alert("Nice try 😄❤️\nBut it has to be ME!");
-
-}
-
-</script>
+      alert(funnyMessages[Math.floor(Math.random() * funnyMessages.length)]);
+    });
+  </script>
 
 </body>
 </html>
