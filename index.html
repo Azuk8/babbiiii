@@ -8,16 +8,34 @@
 <body>
 
 <div class="container">
-<h1>Hi Beautiful ❤️</h1>
-<p>I made something special for you...</p>
 
-<button onclick="nextPage()">Click Here</button>
+<h1>Hey Beautiful ❤️</h1>
+
+<p id="flirtyText">I made something just for you...</p>
+
+<button onclick="nextPage()">Open My Secret 😏</button>
+
 </div>
 
 <script>
+
 function nextPage(){
 window.location.href = "question.html";
 }
+
+const messages = [
+"Are you a magician? Because whenever I see you everything else disappears 😍",
+"I think my heart installed you as the default app ❤️",
+"You must be tired… you've been running through my mind all day 😏",
+"I made this because you're kinda special… okay VERY special 🥰"
+];
+
+setInterval(()=>{
+document.getElementById("flirtyText").innerText =
+messages[Math.floor(Math.random()*messages.length)];
+},3000);
+
 </script>
+
 </body>
 </html>
