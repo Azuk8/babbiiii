@@ -52,3 +52,8 @@ function createFlirt() {
 
 setInterval(createHeart, 400);
 setInterval(createFlirt, 4000);
+document.addEventListener("DOMContentLoaded", () => {
+  setInterval(createHeart, 400);
+  setInterval(createFlirt, 4000);
+});
+
